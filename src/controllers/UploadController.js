@@ -5,7 +5,6 @@ import { uploadService } from "../services/UploadService.js";
 
 
 
-
 export class UploadController extends BaseController {
   constructor() {
     super('api/upload')

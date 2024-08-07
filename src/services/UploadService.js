@@ -44,7 +44,7 @@ class UploadService {
     const jpegImg = await sharpService.toJPEG(shrunkImg)
     file.data = await jpegImg.toBuffer()
     file.mimetype = 'image/jpg'
-    file.name = file.name.split('.')[0] + '.jpg'
+    file.name = file.name.split('.')[0] + '.jpg' // changing to a jpeg
     const url = await this.uploadImage(file, userId)
     return { url }
   }
